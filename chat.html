@@ -30,8 +30,12 @@ embedded_svc.settings.waitingStateBackgroundImgURL = '';
 embedded_svc.settings.smallCompanyLogoImgURL = '';
 embedded_svc.settings.directToButtonRouting = function(prechatFormData) {
 	if (Subject_snap__c.value == "New Customer Plans/Pricing"){
+        	return "5730f000000k9bm";
+        }
+	if (Subject_snap__c.value == "New Customer Plans/Pricing"){
         	return "5730f000000k9br";
         }
+	
 };
 
 embedded_svc.settings.enabledFeatures = ['LiveAgent'];

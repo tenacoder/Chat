@@ -28,17 +28,9 @@ embedded_svc.settings.avatarImgURL = '';
 embedded_svc.settings.prechatBackgroundImgURL = '';
 embedded_svc.settings.waitingStateBackgroundImgURL = '';
 embedded_svc.settings.smallCompanyLogoImgURL = '';
-            embedded_svc.settings.directToButtonRouting = function(prechatFormData) {
-                var salesButtonId = '{!$Setup.Live_Agent_Settings__c.Sales_button_ID__c}';
-                var eaButtonId = "573m00000008OzE";
-                var retentionButtonId = '{!$Setup.Live_Agent_Settings__c.Retention_Button_ID__c}';
-                if (Subject_snap__c.value == "New Customer Plans/Pricing"){
-                    return "5730f000000k9bm";
-                }
-                else if (Subject_snap__c.value =="Pause Subscription"){
-                    return "5730f000000k9br";
-                }
-            };
+embedded_svc.settings.directToButtonRouting = function(prechatFormData) {
+	return "5730f000000k9br";
+};
 
 embedded_svc.settings.enabledFeatures = ['LiveAgent'];
 embedded_svc.settings.entryFeature = 'LiveAgent';

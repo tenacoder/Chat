@@ -2,8 +2,8 @@
 	Route Check
 	<body>
 <style type='text/css'>
-	.embeddedServiceHelpButton .helpButton .uiButton { background-color: #005290; font-family: "Salesforce Sans", sans-serif; }
-	.embeddedServiceHelpButton .helpButton .uiButton:focus { outline: 1px solid #005290; }
+	.embeddedServiceHelpButton .helpButton .uiButton { background-color: #71af05; font-family: "Salesforce Sans", sans-serif; }
+	.embeddedServiceHelpButton .helpButton .uiButton:focus { outline: 1px solid #71af05; }
 	@font-face {
 	font-family: 'Salesforce Sans';
 	src: url('https://www.sfdcstatic.com/system/shared/common/assets/fonts/SalesforceSans/SalesforceSans-Regular.woff') format('woff'),
@@ -28,22 +28,15 @@ embedded_svc.settings.avatarImgURL = '';
 embedded_svc.settings.prechatBackgroundImgURL = '';
 embedded_svc.settings.waitingStateBackgroundImgURL = '';
 embedded_svc.settings.smallCompanyLogoImgURL = '';
-embedded_svc.settings.directToButtonRouting = function(prechatFormData) {
-                var salesButtonId = '{!$Setup.Live_Agent_Settings__c.Sales_button_ID__c}';
-                var eaButtonId = "573m00000008OzE";
-                var retentionButtonId = '{!$Setup.Live_Agent_Settings__c.Retention_Button_ID__c}';
-                if (Subject_snap__c.value == "New Customer Plans/Pricing"){
-                    return salesButtonId;
-                }
-                else if (Subject_snap__c.value =="Pause Subscription"){
-                    return retentionButtonId;
-                }
-            };
+//embedded_svc.settings.directToButtonRouting = function(prechatFormData) {
+// Dynamically changes the button ID based on what the visitor enters in the pre-chat form.
+//Returns a valid button ID.
+//};
 
 embedded_svc.settings.enabledFeatures = ['LiveAgent'];
 embedded_svc.settings.entryFeature = 'LiveAgent';
 //embedded_svc.settings.prepopulatedPrechatFields = {}; //Sets the auto-population of pre-chat form fields
 
-embedded_svc.init('https://ziprecruiter--tena0322.cs20.my.salesforce.com', 'https://tena0322-ziprecruiter.cs20.force.com/', gslbBaseURL, '00Dm0000000DO1f', 'Snap_in_Community', { baseLiveAgentContentURL: 'https://c.la4-c1cs-phx.salesforceliveagent.com/content', deploymentId: '572G0000000fxSa', buttonId: '573m00000008OzE', baseLiveAgentURL: 'https://d.la4-c1cs-phx.salesforceliveagent.com/chat', eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04Im00000008OJSEA2_16318657e90'}); };if (!window.embedded_svc) { var s = document.createElement('script'); s.setAttribute('src', 'https://ziprecruiter--tena0322.cs20.my.salesforce.com/embeddedservice/4.1/esw.min.js'); s.onload = function() { initESW(null); }; document.body.appendChild(s); } else { initESW('https://service.force.com'); }</script>
+embedded_svc.init('https://ziprecruiter--tena0322.cs20.my.salesforce.com', 'https://tena0322-zr.cs20.force.com/', gslbBaseURL, '00Dm0000000DO1f', 'Chat_Test', { baseLiveAgentContentURL: 'https://c.la4-c1cs-phx.salesforceliveagent.com/content', deploymentId: '572G0000000fxSa', buttonId: '573m00000008OzE', baseLiveAgentURL: 'https://d.la4-c1cs-phx.salesforceliveagent.com/chat', eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04Im00000008OItEAM_1628c591561'}); };if (!window.embedded_svc) { var s = document.createElement('script'); s.setAttribute('src', 'https://ziprecruiter--tena0322.cs20.my.salesforce.com/embeddedservice/4.1/esw.min.js'); s.onload = function() { initESW(null); }; document.body.appendChild(s); } else { initESW('https://service.force.com'); }</script>
 	</body>
 		</html>
